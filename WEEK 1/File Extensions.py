@@ -1,0 +1,18 @@
+str = input("File name: ").casefold().strip()
+s2 = str.rfind('.')
+s1 = str[s2:]
+match s1:
+    case ".gif":
+        print("image/gif")
+    case ".jpg" | ".jpeg":
+        print("image/jpeg")
+    case ".png":
+        print("image/png")
+    case ".pdf":
+        print("application/pdf")
+    case ".txt":
+        print("text/plain")
+    case ".zip":
+        print("application/zip")
+    case _:
+        print("application/octet-stream")
